@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parallax</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.24/dist/css/uikit.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="../css/style_home.css">
+    <link rel="stylesheet" type="text/css" href="../css/parallax.css">
+    <meta name="author" content="Leen Kharoud">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <!-- icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="../img/LK_logo.jpg">
+
+
+         <!-- UIkit CSS -->
+         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.17.4/dist/css/uikit.min.css" />
+
+         <!-- UIkit JS -->
+         <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.4/dist/js/uikit.min.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.4/dist/js/uikit-icons.min.js"></script>
+ 
+         
+    <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Jua&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;0,800;1,400&display=swap');
+
+
+    body h1{
+        font-family: Inter, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-weight:600;
+        text-align: center;
+        margin-top: 5%;
+        margin-bottom: 0;
+    }
+
+    h2{
+        margin: 0;
+        color: rgb(36, 63, 129);
+    }
+
+    .intro article{    
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 30%;
+        max-height: fit-content;
+        overflow: hidden;
+        margin: 75px auto;
+        margin-top: 0;
+        padding-right: 0;
+        align-items: center;
+        align-content: center;
+    }
+
+    .intro{
+        margin-bottom: 10%;
+        padding-left: 2%;
+        padding-right: 0;
+        padding-top: 0;
+        overflow: visible;
+    }
+
+    main{
+        padding: 10%;
+    }
+
+   .intro p{
+        font-size: 20px;
+    }
+
+    body{
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+    }
+
+    .intro aside{
+        align-items: center;
+        align-content: center;
+    }
+   
+    h1.parallax{
+        padding-bottom: 5%;
+        margin-bottom: 0;
+        padding-left: 6%;
+        padding-right: 6%;
+        font-size: 50px;
+        
+    }
+
+    .instructionsModal{
+            position: fixed; 
+            /* stretch to cover entire screen */
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            /* transparent grey background - black with 30% */
+            background-color: rgba(0, 0, 0, 0.3);
+            /* make sure this pops up OVER all other content */
+            z-index: 999999;
+            /* starting state of 0% opacity for our transition */
+            opacity: 0;
+            /* we always define a transition on the starting state */
+            transition: opacity 400ms ease-in; /* slow then speeds up - check */
+            /* disable all mouse events */
+            pointer-events: none;
+        }
+
+    .instructionsModal:target{
+        /* when targeted, clicking the  */
+        opacity: 1;
+        /* re-allow pointer events */
+        pointer-events: auto;
+
+    }
+
+
+    /* a div that is a direct descendant of something with infoModal */
+    .instructionsModal > div {
+        width: fit-content;
+        height: fit-content;
+        position: relative;
+        /* makes sure its centered and down 10% form top of screen */
+        margin: 10% auto;
+        padding: 2rem;
+        background-color: white;
+        border-radius: 20px;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .close{
+        height: 20px;
+        width: 20px;
+        font-weight: 700;
+        background-color: white;
+        color: black;
+        text-decoration: none;
+        /* when you absolute, tell it where */
+        position: absolute;
+        top: 3%;
+        right: 3%;
+        text-align: center;
+        transition: all 200ms ease;
+        line-height: 20px;
+        /* border-radius: 20px; */
+    }
+
+    .close:hover{
+        color: orange;
+        text-decoration: none;
+    }
+
+    a.button {
+        text-decoration: none;
+        color: white;
+        background-color: rgb(236, 123, 37);
+        padding: 1%;
+        font-size: 30px;
+        justify-content: center;
+        justify-items: center;
+        text-align: center;
+        border-radius: 30px;
+        max-width: fit-content;
+        max-height: fit-content;
+        padding-left: 3%;
+        padding-right: 3%;
+        transition: all 300ms ease-in-out;
+    }
+
+    a.button:hover{
+        color: rgb(236, 123, 37);
+        background-color: white;
+        border: solid rgb(236, 123, 37);
+    }
+
+
+/* MEDIA QUERIES */
+
+/* tablet size */
+@media only screen and (max-width:1155px){
+
+.intro{
+    padding: 10%;
+    margin-top: 50%;
+    margin-bottom: 50%;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+}
+
+
+h1.parallax{
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    margin-bottom: 0;
+
+    font-size: 40px;
+}
+
+
+.intro{
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    padding: 0;
+    margin-top: 40%;
+    margin-bottom: 80%;
+}
+
+
+}
+
+
+@media only screen and (max-width:767px){
+
+    .mobile-menu{
+        position: absolute;
+        right: 0.5rem;
+        top: 0.5rem;
+        display: block;
+        font-size: 2rem;
+        color: rgb(141, 141, 141);
+    }
+
+    .menu{
+        flex-direction: column;
+        width: 100vw;
+        overflow: hidden;
+        height: 0;
+
+    }
+
+    .menu.open{
+        height: auto;
+    }
+
+    h1.parallax{
+        padding-left: 5%;
+        padding-right: 5%;
+        padding-bottom: 5%;
+        margin-bottom: 0;
+
+        font-size: 30px;
+    }
+
+}
+
+
+@media only screen and (max-width:650px){
+    .intro{
+    margin-top: 50%;
+    }
+
+  
+
+
+}
+
+    </style>
+
+     <script>
+        function toggleMenu(){
+          // 
+          const element = document.getElementById('menu');
+          // if it already has class open, remove it, if not, add it
+          element.classList.toggle('open');
+        }
+  
+      </script>
+</head>
+
+
+<body>
+
+    
+        <header>
+            <div id="logo-container">
+                <a href="../home/home.html">
+                    <img src="../img/LK_logo.png" alt="logo">
+                </a>
+            </div>
+        
+            <nav>
+                <span class="mobile-menu" onclick="toggleMenu()">
+                    <span class="material-icons">menu</span>
+                </span>
+                <ul class="menu" id="menu">
+                    <li><a href="../Projects/index.html">projects</a></li>
+                    <li><a href="../Art/index.html">art</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <br><br>
+        <div class="parallaxHeader">
+        <h1 class="parallax">Welcome to an Interactive Art Experience</h1>
+        
+    </div>
+<main>
+
+    
+  <div class="intro">
+
+    <article>
+        <br>
+        <a href = #instructions class="button">Activate</a>
+        <div id="instructions" class="instructionsModal">
+            <div>
+                <a href="#close"title="close" class="close">X</a>
+                <h2>Using a mousepad?</h2>
+                <p>Click and drag around the image</p>
+                <h2>..or your finger?</h2>
+                <p>Touch and swipe to move it around </p>
+            </div>
+
+        </div>
+        <br>
+        <br>
+    <h2>Using Procreate</h2>
+    <p>This illustration was created in Procreate! The key to this 3D effect is the use of layers. Just like stacking sheets, I arranged different elements of the artwork on separate layers.</p>
+    <br>
+
+
+    <h2>The Parallax Effect</h2>
+    <p>Now comes the most exciting part — the parallax effect. I've arranged the layers to respond to your touch or mouse movements using Javascript. As you navigate the artwork, different layers move at different speeds, giving you a sense of depth and motion.</p>
+    <br>
+   
+    <!-- <h2>Background</h2>
+    <p> Starting on this artistic journey means a lot to me because I've always had a deep love for art. I've been creating art for years, and it's been a big part of who I am. As a computer engineering student, my focus shifted away from art due to the demands of my studies.
+
+        Now, I've found a way to bring together my technical skills and my passion for art. This artwork is the result of that mix—a way for me to reconnect with my creativity: my first experiment with the parallax effect, representing a step into the realm of interactive art.</p>
+    <br> -->
+
+  </article>
+
+    <aside>
+        
+        <div class="main-content"> 
+            <div class="image-container">
+                <canvas class="canvas" width="900" height="1200" id="canvas"></canvas>
+            <div class="loading-screen" id="loading">Loading...</div>
+        </div>
+    </aside>
+    
+  </div>
+
+  
+
+    <h2>Background</h2>
+    <p> Starting on this artistic journey means a lot to me because I've always had a deep love for art, and it's been a big part of who I am. As a computer engineering student, my focus shifted away from art due to the demands of my studies.
+
+        Now, I've found a way to bring together my technical skills into my passion. This artwork is the result of that - a way for me to reconnect with my creativity: my first experiment with the parallax effect, representing a step into the realm of interactive art.</p>
+    <br>
+
+    <br>
+</main>
+
+    <footer>
+        <p>© Leen Kharouf</p>
+        <br>
+        <p>Get in touch:</p>
+        
+        <p>leenkharouf@nyu.edu</p>
+        <img src="../img/giphy.gif" class="eyes"/>
+    
+    </footer>
+</body>
+
+<script type="text/javascript" src="../main.js"></script>
+
+</html>

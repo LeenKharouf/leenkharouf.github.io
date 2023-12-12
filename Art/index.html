@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<!-- Declare HTML doctype for file -->
+<html lang="en">
+    <head>
+        <!-- Character set sttribute specifies character encoding.
+        Failure to state this may result in malformed font characters -->
+        <meta charset="utf-8" />
+        <!-- Viewport metatag is required for proper responsive rendering -->
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Title tag is the first thing you see as google search result and the title in the broswer tab -->
+        <title>Leen Kharouf</title>
+        <link rel="icon" type="image/x-icon" href="../img/LK_logo.jpg">
+        <link href="../css/style_home.css" rel="stylesheet"/>
+        <link href="../css/art.css" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+        <!-- icons -->
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" /> -->
+        
+        <link rel="stylesheet" href="css/uikit.min.css" />
+        <script src="js/uikit.min.js"></script>
+        <script src="js/uikit-icons.min.js"></script>
+
+
+
+        <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        />
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+        />
+        
+
+
+        <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        />
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+        />
+
+        
+
+        <!-- UIkit CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.17.4/dist/css/uikit.min.css" />
+
+        <!-- UIkit JS -->
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.4/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.4/dist/js/uikit-icons.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Nabla&display=swap" rel="stylesheet">
+                
+        <!-- <script>
+            
+
+            function filterImages(category) {
+                const galleryItems = document.querySelectorAll('.gallery-item');
+
+                galleryItems.forEach((item) => {
+                    const itemCategory = item.dataset.category;
+
+                    if (category === 'all' || itemCategory === category) {
+                    item.classList.remove('uk-hidden');
+                    } else {
+                    item.classList.add('uk-hidden');
+                    }
+                });
+                }
+
+
+            const images = [
+                { path: '../Art/oils/IMG_8703.jpeg', category: 'oil' },
+                { path: '../Art/oils/IMG_0657.jpeg', category: 'oil' },
+                { path: '../Art/oils/HAND BULB.jpeg', category: 'oil' },
+                { path: '../Art/oils/0824.jpeg', category: 'oil' },
+                { path: '../Art/Digital/IMG_0902.jpeg', category: 'digital' },
+                { path: '../Art/Digital/IMG_0947.jpeg', category: 'digital' },
+                { path: '../Art/Digital/IMG_0995.jpeg', category: 'digital' },
+                { path: '../Art/Digital/Untitled_Artwork.jpeg', category: 'digital' },
+                { path: '../Art/Digital/Untitled_Artwork-2.jpeg', category: 'digital' },
+                { path: '../Art/Digital/IMG_1482.jpeg', category: 'digital' },
+                { path: '../Art/Digital/IMG_1210.jpeg', category: 'digital' },
+                { path: '../Art/Digital/4.background.jpg', category: 'digital' },
+                { path: '../Art/Watercolour/IMG_0491.jpeg', category: 'watercolour' },
+                { path: '../Art/Watercolour/IMG_2029.jpeg', category: 'watercolour' },
+                { path: '../Art/Watercolour/IMG_5469.jpeg', category: 'watercolour' },
+                { path: '../Art/Watercolour/SHOES.jpeg', category: 'watercolour' },
+                { path: '../Art/Watercolour/Untitled_Artwork4.jpg', category: 'watercolour' },
+                { path: '../Art/Digital/eyee.jpg', category: 'digital' },
+                { path: '../Art/Watercolour/DSC_0278.JPG', category: 'digital' },
+                { path: '../Art/Watercolour/razaan.jpeg', category: 'charcoals' },
+                { path: '../Art/Watercolour/Untitled_Artwork4.jpg', category: 'charcoals' },
+                
+                // ... add more images with categories
+            ];
+
+            
+
+
+    
+        </script> -->
+          
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Nabla&display=swap');
+    
+
+    .intro h1 {
+        /* font-family: Nabla, Inter; */
+        font-family: 'Chelsea Market', Inter;
+        font-size: 100px;
+        color: white;
+    }
+
+    h2{
+        font-family: 'Chelsea Market', Inter;
+        color: white;
+        text-align: center;
+    }
+
+    h1.uk-heading-line.uk-text-center{
+        color: white;
+    }
+
+    .uk-card .uk-card-default .uk-flex .uk-flex-center .uk-flex-middle{
+        color: white;
+        background-color: white;
+    }
+
+    .intro p{
+        /* font-family: Nabla, Inter; */
+        font-family: 'Chelsea Market', Inter;
+        color: white;
+    }
+
+    body{
+        background-color: rgb(214, 105, 37);
+        background-color: rgb(157, 27, 27);
+        /* background: rgb(55, 111, 208); */
+        background: linear-gradient(180deg,  rgb(55, 111, 208) 0%, rgb(157, 27, 27) 35%, rgb(32, 32, 32) 90%);
+    }
+
+    header img{
+        width: 50%;
+        filter: invert(100%);
+    }
+
+    header{
+        color: white;
+    }
+
+
+    .gallery{
+        display: flex;
+        /* flex-wrap: wrap; */
+
+    }
+
+    main{
+        padding: 5%;
+    }
+
+    .menu li a{ 
+    color: white;
+   }
+
+   .menu li a:hover{ 
+    color: rgb(0, 0, 0);
+   }
+
+   #logo-container {
+    cursor: pointer;
+}
+
+
+   @media only screen and (max-width:767px){
+
+   header img{
+        width: 10%;
+        height: auto;
+        float: left;
+        padding: 10px;
+    }
+  
+   .intro p{
+    font-size: 30px;
+   }
+
+   .intro h1{
+    font-size: 70px;
+   }
+
+   .mobile-menu{
+        position: absolute;
+        right: 0.5rem;
+        top: 0.5rem;
+        display: block;
+        font-size: 2rem;
+        color: rgb(255, 255, 255);
+    }
+
+    .menu li a{
+        font-size: 20px;
+        background-color: rgb(246, 246, 246);
+        color: rgb(214, 105, 37);
+    
+    }
+    
+    .menu li a:hover{
+        background-color: rgb(233, 233, 233);
+        color: black;
+    }
+}
+
+        #clearCanvasBtn {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 2; /* Ensure the button is above the canvas */
+        }
+    
+
+        </style>
+        <script>
+            function toggleMenu(){
+              // 
+              const element = document.getElementById('menu');
+              // if it already has class open, remove it, if not, add it
+              element.classList.toggle('open');
+            }
+
+            document.getElementById('logo-container').addEventListener('click', function() {
+                window.location.href = 'home.html';
+            });
+
+
+      
+          </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const canvas = document.getElementById("draw");
+            const ctx = canvas.getContext("2d");
+
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            ctx.strokeStyle = "#BADA55";
+            ctx.lineJoin = "round";
+            ctx.lineCap = "round";
+            ctx.lineWidth = 50; // Changed to a smaller value for a thinner line
+
+            let isDrawing = false;
+            let lastX = 0;
+            let lastY = 0;
+            let hue = 0;
+            let direction = true;
+
+            function draw(e) {
+                if (!isDrawing) return;
+                ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+                ctx.beginPath();
+                ctx.moveTo(lastX, lastY);
+                ctx.lineTo(e.clientX, e.clientY);
+                ctx.stroke();
+                [lastX, lastY] = [e.offsetX, e.offsetY];
+
+                hue++;
+                if (hue >= 360) {
+                    hue = 0;
+                }
+            }
+
+            function clearCanvas() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }
+
+            canvas.addEventListener("mousedown", (e) => {
+                isDrawing = true;
+                [lastX, lastY] = [e.offsetX, e.offsetY];
+            });
+
+            canvas.addEventListener("mousemove", draw);
+            canvas.addEventListener("mouseup", () => {
+                isDrawing = false;
+                clearCanvas();
+            });
+
+            window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            clearCanvas(); // Redraw the cleared canvas upon resize
+        });
+        });
+    </script>
+
+
+    </head>
+
+    <body>
+        <header>
+            <div id="logo-container">
+                <a href="../home/home.html">
+                    <img src="../img/LK_logo.png" alt="logo">
+                </a>
+            </div>
+        
+            <nav>
+                <span class="mobile-menu" onclick="toggleMenu()">
+                    <span class="material-icons">menu</span>
+                </span>
+                <ul class="menu" id="menu">
+                    <li><a href="../Projects/index.html">projects</a></li>
+                    <li><a href="index.html">art</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+
+      <div class="intro">
+
+        <article>
+
+            <h1>the art side</h1>
+            <p>
+                Here, I store all my art stuff!
+            </p>
+
+        </article>
+
+        <aside>
+            <img src="../img/cartoon2.jpg" alt="this is me!">
+            <!-- <a href="#" class="resume">Download Resume</a> -->
+            <!-- <a href="../Resume_Oct23.pdf" class="resume" target="_blank" download="LeenKharoufResume">Download Resume</a> -->
+        </aside>
+
+
+    </div>
+   
+    <main>
+
+        <div class="uk-section uk-section-default">
+            <div class="uk-container">
+        
+                <div class="uk-child-width-expand@s" uk-grid>
+                    <div class="uk-grid-item-match">
+                        <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 500px"> <img src="../img/clay copy.jpg" alt="" uk-cover></div>
+        
+                     </div>
+                    <div>
+                        <h1>Welcome to my Art Portfolio</h1>
+                        <p>
+                            I'm Leen (yep, that's still my name), I'm 21 years old and I've been making art since 2005.
+                        </p>
+                        <p>
+                            I love experimenting with different media, but I am big on the fine arts, especially realism.
+                            I like working with my hands, and art is the one thing that I could spend 10+ hours a day doing.
+                        </p>
+
+                        <p>Have a look at my work below and feel free to follow my on insta!</p>
+                        <p>If you have any questions, my email is rightttt at the bottom of the page.</p>
+                        <p>See you later!</p>
+                        <a href="https://drive.google.com/file/d/1KD3oHxLxbJzhidLd-5D19Xagj5AFukWw/view?usp=sharing">Go to Instagram Page</a>
+
+                        
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+
+
+
+
+        <br><br>
+        <!-- <div id="gallery">
+            <button onclick="filterImages('all')">All</button>
+            <button onclick="filterImages('oil')">Oil</button>
+            <button onclick="filterImages('digital')">Digital</button>
+            <button onclick="filterImages('watercolour')">Watercolour</button>
+        </div>
+           -->
+
+
+        <div class="uk-child-width-1-2@s uk-child-width-1-3@m" uk-grid="parallax: 0; parallax-justify: true; masonry: pack">
+            <div>
+                <div id="" class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 400px"> <img src="../Art/oils/IMG_8703.jpeg" alt="" uk-cover></div>
+            </div>
+            
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 500px"><img src="../Art/oils/IMG_0657.jpeg" alt="" uk-cover></div>
+            </div>
+            
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 600px"> <img src="../Art/oils/HAND BULB.jpeg" alt="" uk-cover></div>
+            </div>
+            <div>
+                <h1 class="uk-heading-line uk-text-center"><span>OILS</span></h1>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 600px"><img src="../Art/Digital/IMG_0902.jpeg" alt="" uk-cover> </div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 500px"><img src="../Art/Digital/IMG_0947.jpeg" alt="" uk-cover></div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 500px"> <img src="../Art/Watercolour/IMG_0491.jpeg" alt="" uk-cover></div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 500px"> <img src="../Art/Digital/IMG_1210.jpeg" alt="" uk-cover></div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 500px"> <img src="../Art/Watercolour/IMG_5469.jpeg" alt="" uk-cover></div>
+            </div>
+            <div>
+                <h1 class="uk-heading-line uk-text-center"><span>WATERCOLOURS</span></h1>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 400px"> <img src="../Art/Watercolour/IMG_2029.jpeg" alt="" uk-cover></div>
+            </div>
+            
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 300px"> <img src="../Art/Watercolour/SHOES.jpeg" alt="" uk-cover></div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 500px"> <img src="../Art/Watercolour/Untitled_Artwork 4.jpg" alt="" uk-cover></div>
+            </div>
+
+           
+
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 400px"> <img src="../Art/DSC_0278.JPG" alt="" uk-cover></div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 300px"> <img src="../Art/eyee.jpg" alt="" uk-cover></div>
+            </div>
+            
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 500px"> <img src="../img/parents.JPG" alt="" uk-cover></div>
+            </div>
+
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 400px"> <img src="../Art/Digital/Untitled_Artwork.jpeg" alt="" uk-cover></div>
+            </div>
+
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 600px"> <img src="../Art/Digital/IMG_1482.jpeg" alt="" uk-cover></div>
+            </div>
+            <div>
+                <h1 class="uk-heading-line uk-text-center"><span>DIGITAL</span></h1>
+            </div>
+            <!-- <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 400px"> <img src="../Art/Digital/IMG_1210.jpeg" alt="" uk-cover></div>
+            </div> -->
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 500px"> <img src="../Art/Digital/Untitled_Artwork-2.jpeg" alt="" uk-cover></div>
+            </div>
+            <div>
+                <div class="uk-card uk-card-default uk-flex uk-flex-center uk-flex-middle" style="height: 600px"> <img src="../Art/Digital/4.background.jpg" alt="" uk-cover></div>
+            </div>
+        </div>
+       
+      
+
+</main>
+
+<h2 class="fs-1">YOUR OWN CANVAS</h2>
+<h2 class="fs-1">click and drag to draw!</h2>
+
+<canvas id="draw"></canvas>
+
+
+
+<footer>
+    <p>© Leen Kharouf</p>
+    <br>
+    <p>Get in touch:</p>
+    
+    <p>leenkharouf@nyu.edu</p>
+    <img src="../img/giphy.gif" class="eyes"/>
+
+</footer>
+
+</body>
+  </html>
