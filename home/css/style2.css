@@ -1,0 +1,270 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Global Styles */
+*{
+    box-sizing: border-box;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+header.header-flex{
+    /* nav will stack next to logo */
+    display: flex;
+    flex-direction: row;
+    /* 
+    makes them go as far as possible */
+    justify-content: space-between;
+
+    /* aligns items center vertically */
+    align-items: center;
+}
+
+
+h1{
+    margin: 0;
+    color: black    fff;
+}
+
+h2{
+    margin: 0 32px;
+}
+
+
+nav.main-nav ul{
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    
+}
+
+
+.main-nav li{
+    text-align: center;
+    /* justify-content: center; */
+    color: black;
+}
+
+.main-nav li a{
+    text-align: center;
+    /* justify-content: center; */
+    color: black;
+}
+
+.main-nav a{
+    /* makes area around text clickable */
+    display: block;
+    width: 3rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    /* justify-content: space-between; */
+    text-decoration: none;
+}
+
+.main-nav a:hover{
+    /* makes area around text clickable */
+    display: block;
+    width: 3rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    /* justify-content: space-between; */
+    text-decoration: none;
+    color: darkgray;
+}
+
+
+div.intro{
+    display: flex;
+    flex-direction: row;
+    /* take up as many pixels as window, not the parent */
+    max-width: 100vw;
+    /* takes up the exact height of the window, cuts off extra */
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 0;
+    padding-top: 12%;
+    justify-content: center;
+    padding-left: 250px;
+    padding-right: 250px;
+    /* background: linear-gradient(180deg, #1a1a1a 0%, rgba(58, 58, 58, 0.95) 8.85%, rgba(181, 166, 166, 0.5) 30%, rgba(80, 75, 75, 0.70) 50.52%, rgba(146, 144, 144, 0.61) 69.27%, rgba(243, 243, 243, 0.00) 99.99%, rgba(241, 241, 241, 0.00) 100%); */
+}
+
+aside{
+    justify-content: center;
+    align-items: center;
+    
+
+}
+aside img{
+    border-radius: 87px;
+    
+}
+
+div.intro article{
+    width: 100%;
+    /* height: 170px; */
+    position: relative;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 75%;
+    overflow: hidden;
+    margin: 24px auto;
+    padding-right: 10%;
+    
+}
+
+article h1{
+    /* color: #FFF; */
+    /* font-family: Inter; */
+    font-size: 75px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+article p{
+    /* color: #FFF; */
+    /* font-family: Inter; */
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+a.resume{
+    padding: 2% 5%;
+    border: 2px solid black;
+    display: block;
+    border-radius: 87px;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    
+}
+
+a.resume:hover{
+    padding: 2% 5%;
+    border: 2px solid black;
+    display: block;
+    border-radius: 87px;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(56, 56, 56);
+    transition: all 0.5s ease;
+}
+
+
+
+.container{
+    display: flex;
+    margin: 0;
+    max-width: 100vw;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+
+.thumb{
+    position: relative;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 48%;
+    overflow: hidden;
+    margin: 24px auto;
+    margin-top: 0;
+}
+
+.mask{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* puts items next to each other */
+    display: flex;
+    /* fixes it so it stacks on top */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* starts off not showing */
+    opacity: 0;
+    background-color: rgba(44, 43, 43, 0.85);
+    color: white;
+    transition: all 0.5s ease;
+    font-size: 25px;
+}
+
+.mask h2{
+    margin: 0;
+}
+
+.thumb img{
+    /* needs a start and end value. This is the start*/
+    transform: scale(1);
+    transform: rotate(0deg);
+    /* anything that changes */
+    transition: all 1s ease;
+}
+
+.thumb:hover img{
+    transform: scale(1.5) rotate(-20deg);
+}
+
+.thumb:hover .mask{
+    opacity: 1;
+}
+
+
+
+/* MEDIA QUERIES */
+/* Smaller than ipad classic in portrait so we will assume mobile  */
+@media only screen and (max-width:767px){
+    .container{
+        flex-direction: column;
+        padding: 12px;
+    }
+
+    .hero article{
+        width: 100%;
+        padding: 25px;
+        bottom: 0;
+    }
+}
+/* tablet size */
+@media only screen and (min-width: 768px) and (max-width:1024px){
+
+    .hero article{
+        width: 75%;
+    }
+
+    .thumb{
+        flex-basis: 45%;
+    }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width:1024px){
+
+} 
