@@ -71,12 +71,10 @@
       
             function pauseVideo() {
                 var videoPlayer = document.getElementById('videoPlayer');
-
                 // Pause the video
                 videoPlayer.pause();
-                
                 // Reset the playback position to the beginning
-                videoPlayer.currentTime = 0;
+                videoPlayer.currentTime = 0;  // current playback position of the video, <video> element
             }
 
           </script>
