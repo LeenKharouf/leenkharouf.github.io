@@ -78,13 +78,6 @@
 }
 
 /* Animation container */
-.animation-wrapper {
-  position: absolute;
-  width: 400px; /* Increased size of the animation */
-  height: 400px;
-  animation: move-across 30s ease-in-out infinite;
-  filter: drop-shadow(0px 10px 15px rgba(255, 255, 255, 0.5)); /* Add a glow effect */
-}
 
 /* Title styling */
 .lunar-lander-title {
@@ -192,6 +185,14 @@
 
         /* Handle responsiveness */
         @media (max-width: 758px) {
+            .animation-wrapper {
+        position: absolute;
+        width: 200px; /* Smaller size for mobile */
+        height: 200px;
+        animation: move-and-rotate 30s linear infinite; /* Maintain the same animation */
+        filter: drop-shadow(0px 5px 10px rgba(255, 255, 255, 0.5)); /* Slightly adjusted shadow */
+    }
+
             .row > .col-lg-5 {
                 margin-bottom: 20px; /* Add space between stacked sections */
             }
@@ -406,7 +407,6 @@
               src="https://lottie.host/1a116a2d-a764-4ca5-8019-7f18f027ce8d/k4NDV5Godm.lottie" 
               background="transparent"
               speed="1"
-              style="width: 400px; height: 400px"
               loop
               autoplay
             ></dotlottie-player>
