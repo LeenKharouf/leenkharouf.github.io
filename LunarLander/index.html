@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Leen Kharouf</title>
+    <link rel="icon" type="image/x-icon" href="../img/LK_logo.jpg" />
+    <!-- Main CSS -->
+    <link href="../css/art.css" rel="stylesheet" />
+    <link href="../css/LunarLander.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined&family=Chelsea+Market&family=Nabla&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Optional Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
+    <!-- UIkit CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.17.4/dist/css/uikit.min.css"
+    />
+
+    <style>
+      /* Global Dark Moonlit Theme */
+      body {
+        background-color: black;
+        color: #e0e0e0;
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: black;
+      }
+
+      header img {
+        filter: invert(100%);
+      }
+
+      .menu li a {
+        color: white;
+      }
+
+      .menu li a:hover {
+        color: rgb(215, 237, 45);
+      }
+
+      
+      /* Center the intro content */
+/* Intro container setup */
+/* Intro container setup */
+/* Intro container setup */
+.intro {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 500px;
+  background-color: black;
+}
+
+/* Center the content */
+.center-container {
+  position: relative;
+  z-index: 1; /* Ensure text is on top */
+}
+
+/* Animation container */
+.animation-wrapper {
+  position: absolute;
+  width: 400px; /* Increased size of the animation */
+  height: 400px;
+  animation: move-across 30s ease-in-out infinite;
+  filter: drop-shadow(0px 10px 15px rgba(255, 255, 255, 0.5)); /* Add a glow effect */
+}
+
+/* Title styling */
+.lunar-lander-title {
+  font-family: 'Zatura', sans-serif;
+  font-size: 12rem;
+  color: #ffffff;
+  text-align: center;
+  z-index: 2;
+}
+
+/* Keyframes for full-screen floating */
+/* Intro container setup */
+.intro {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh; /* Full screen */
+  background-color: black;
+  overflow: hidden; /* Prevent scrolling due to animation overflow */
+}
+
+/* Animation wrapper */
+.animation-wrapper {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  animation: move-and-rotate 30s linear infinite; /* Combined movement and rotation */
+  filter: drop-shadow(100px 100px 30px rgb(0, 0, 0)); /* shadow effect */
+}
+
+/* Keyframes for movement and rotation */
+@keyframes move-and-rotate {
+  0% {
+    transform: translate(-30vw, -10vh) rotate(-180deg); /* Start at the left without rotation */
+  }
+  25% {
+    transform: translate(20vw, 0vh) rotate(90deg); /* Move right and rotate 90 degrees */
+  }
+  50% {
+    transform: translate(60vw, 10vh) rotate(190deg); /* Farther right, halfway rotated */
+  }
+  85% {
+    transform: translate(10vw, 30vh) rotate(180deg); /* Near the end, almost full rotation */
+  }
+  100% {
+    transform: translate(-30vw, -10vh) rotate(-180deg); /* Fully rotated, final position */
+  }
+}
+
+
+
+
+
+
+      /* Project Section Layout */
+      /* Project Section */
+      /* Project Section */
+    /* Project Section */
+        .project-section {
+        padding: 50px 5%;
+        }
+
+        .row {
+        justify-content: space-between; /* Ensure equal distribution of columns */
+        }
+
+        .project-title {
+        font-family: 'Chelsea Market', sans-serif;
+        font-size: 3rem;
+        color: #ffffff;
+        margin-bottom: 10px;
+        }
+        
+
+        .project-description {
+        font-size: 1.5rem;
+        /* font-family: 'Chelsea Market', sans-serif; */
+
+        color: #d3d3d3;
+        margin-bottom: 20px;
+        }
+
+        /* Ensure all content blocks have consistent alignment */
+        .video-container {
+        text-align: center;
+        width: 100%; /* Ensure it fits the column */
+        max-width: 500px; /* Prevent videos from stretching */
+        margin: 0 auto;
+        }
+
+        .video-container video {
+        border-radius: 10px;
+        border: 2px solid #444;
+        width: 100%;
+        height: auto; /* Maintain aspect ratio */
+        max-height: 400px; /* Fix height for alignment */
+        }
+
+        .video-container:hover video {
+        border-color: #f0ad4e;
+        box-shadow: 0 0 20px 5px rgba(240, 173, 78, 0.6); /* Glowing effect */
+        }
+
+        /* Handle responsiveness */
+        @media (max-width: 1000px) {
+        .row {
+            flex-direction: column; /* Stack the columns vertically */
+            justify-content: center; /* Center the stacked items */
+        }
+
+        .col-lg-5 {
+            margin-bottom: 50px; /* Add space between items when stacked */
+        }
+
+        .video-container video {
+            max-height: 250px; /* Adjust video height for smaller screens */
+        }
+        }
+
+        @font-face {
+            font-family: 'SecondSpace';
+            src: url('SecondSpace-KV1go.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            }
+            @font-face {
+            font-family: 'Zatura';
+            src: url('ZaturaRegular-KVGWo.otf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            }
+            @font-face {
+            font-family: 'Rocky';
+            src: url('SuperRocky-2Oere.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            }
+
+            /* Code Access Section */
+.code-access-section {
+  padding: 50px 5%;
+  margin-top: 50px;
+  background-color: #121212; /* Slightly lighter black for contrast */
+  border-radius: 10px;
+}
+
+.code-title {
+  font-family: 'Chelsea Market', sans-serif;
+  font-size: 2.5rem;
+  color: #A2A2FF; /* Gold for emphasis */
+  margin-bottom: 20px;
+}
+
+.code-description {
+  text-align: left;
+  font-size: 1.2rem;
+  color: #d3d3d3;
+  margin-bottom: 30px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between buttons */
+}
+
+.code-button {
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+}
+
+.code-button i {
+  margin-right: 10px; /* Space between icon and text */
+}
+
+.code-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(240, 173, 78, 0.5); /* Subtle glow effect */
+}
+
+.btn-warning {
+  background-color: #A2A2FF;
+  border: none;
+  color: black;
+}
+
+.btn-dark {
+  background-color: #444;
+  border: none;
+  color: white;
+}
+
+
+      footer {
+        text-align: center;
+        padding: 20px 0;
+        color: white;
+        background-color: black;
+      }
+
+      footer img {
+        max-width: 100px;
+      }
+    </style>
+
+    <script>
+      function toggleMenu() {
+        const element = document.getElementById("menu");
+        element.classList.toggle("open");
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <header>
+      <a href="../home/home.html">
+        <img src="../img/LK_logo.png" alt="logo" />
+      </a>
+      <span class="mobile-menu" onclick="toggleMenu()">
+        <span class="material-icons">menu</span>
+      </span>
+      <nav>
+        <ul class="menu" id="menu">
+          <li><a href="index.html">projects</a></li>
+          <li><a href="../Art/index.html">art</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Intro Section -->
+    <div class="intro">
+        <script
+            src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" 
+            type="module"
+        ></script>
+        <div class="center-container">
+          <div class="animation-wrapper">
+            <dotlottie-player
+              src="https://lottie.host/1a116a2d-a764-4ca5-8019-7f18f027ce8d/k4NDV5Godm.lottie" 
+              background="transparent"
+              speed="1"
+              style="width: 400px; height: 400px"
+              loop
+              autoplay
+            ></dotlottie-player>
+          </div>
+          <h1 class="lunar-lander-title">LUNAR LANDER</h1>
+        </div>
+      </div>
+      
+      
+
+    <!-- Project Section -->
+    <!-- Project Section -->
+<main>
+    
+    <div class="container project-section">
+        <p class="project-description">
+            This project uses reinforcement learning to train an agent to control a lunar lander, 
+            navigating it to safely land between two flags. The agent learns through trial and error, 
+            optimising its behaviour over time using techniques like Q-learning and deep neural networks.
+          </p>
+
+          <br><br>
+      <div class="row justify-content-center align-items-center text-center">
+        <!-- Untrained Agent -->
+        <div class="col-lg-5 d-flex flex-column justify-content-center align-items-center">
+          <h2 class="project-title">Before Training</h2>
+          <p class="project-description">
+            The agent takes random, chaotic actions, struggling to control the lunar module.
+          </p>
+          <div class="video-container">
+            <video autoplay loop muted playsinline>
+              <source src="untrained_video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+  
+        <!-- Trained Agent -->
+        <div class="col-lg-5 d-flex flex-column justify-content-center align-items-center">
+          <h2 class="project-title">After Training</h2>
+          <p class="project-description">
+            After training, the agent successfully lands the lunar module with precision.
+          </p>
+          <div class="video-container">
+            <video autoplay loop muted playsinline>
+              <source src="trained_video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Code Access Section -->
+    <div class="container code-access-section text-center">
+      <h2 class="code-title">Check Out the Code</h2>
+      <p class="code-description">
+        The project code and training process are hosted on Google Colab.
+        Please <strong>request access</strong> using the links below to view the code.
+      </p>
+      <div class="button-group">
+        <a
+          href="https://colab.research.google.com/drive/1CUu-ktMandaHLjAqVlP-HnNPXeSatcZ7?usp=sharing"
+          target="_blank"
+          class="btn btn-warning code-button"
+        >
+          <i class="bi bi-google"></i> Open on Colab
+        </a>
+        <!-- <a
+          href="https://github.com/your-github-repo-link-here"
+          target="_blank"
+          class="btn btn-dark code-button"
+        >
+          <i class="bi bi-github"></i> View on GitHub
+        </a> -->
+      </div>
+    </div>
+  </main>
+  
+  
+
+    <!-- Footer -->
+    <footer>
+      <p>© Leen Kharouf</p>
+      <p>Get in touch: leenkharouf@nyu.edu</p>
+      <img src="../img/giphy.gif" class="eyes" alt="decorative gif" />
+    </footer>
+  </body>
+</html>
